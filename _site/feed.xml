@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.7">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-07-18T19:33:31+05:30</updated><id>http://localhost:4000/feed.xml</id><title type="html">Your awesome title</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</subtitle><entry><title type="html">Setting Up VLC Development Environment In Debian</title><link href="http://localhost:4000/Setting-up-VLC-Development-environment-in-Debian" rel="alternate" type="text/html" title="Setting Up VLC Development Environment In Debian" /><published>2018-08-30T00:00:00+05:30</published><updated>2018-08-30T00:00:00+05:30</updated><id>http://localhost:4000/Setting-up-VLC-Development-environment-in-Debian</id><content type="html" xml:base="http://localhost:4000/Setting-up-VLC-Development-environment-in-Debian">&lt;p&gt;Before setting up the development environment, let’s get to know why you should prefer VLC over other media players, why it’s the best, its cool features and a lot more!&lt;/p&gt;
+
+&lt;h2 id=&quot;play-a-video-or-audio-from-terminal&quot;&gt;Play a video or audio from terminal:&lt;/h2&gt;
+&lt;p&gt;You can play the audio/video by running a command in the terminal:&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;$ vlc &amp;lt;path to the file&amp;gt;&lt;/code&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;play--a-youtube-video-in-vlc&quot;&gt;Play  a youtube video in VLC:&lt;/h2&gt;
+&lt;p&gt;Now let’s see how you can download a youtube video using VLC. Follow the above steps. Then,&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;While the video is playing, press ctrl+j to open the Codec box.&lt;/li&gt;
+  &lt;li&gt;Then find an option called location and you can see a string. Copy the whole string and paste in your web browser and click enter.&lt;/li&gt;
+  &lt;li&gt;You will see a downward arrow in the bottom right. Click on it and Voila! Your video is getting downloaded!&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;playback-your-desktop&quot;&gt;Playback your desktop:&lt;/h2&gt;
+&lt;p&gt;You can record desktop screen using VLC media player. Lets see how you can do it.&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;Open VLC and click on media.&lt;/li&gt;
+  &lt;li&gt;Click on Open Capture Device.&lt;/li&gt;
+  &lt;li&gt;Now, click on the capture device tab and select Desktop from the Capture mode drop down box.&lt;/li&gt;
+  &lt;li&gt;Now go down and set the frame rate to 15 frames per second.&lt;/li&gt;
+  &lt;li&gt;Click the down arrow next to the Play button and select Convert.&lt;/li&gt;
+  &lt;li&gt;The convert box will open up.  Now go to the profile section and choose what you need.&lt;/li&gt;
+  &lt;li&gt;Now add your destination file by clicking on the browse option.&lt;/li&gt;
+  &lt;li&gt;Click on start to start recording.&lt;/li&gt;
+  &lt;li&gt;Click on the stop button to stop recording.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;setting-it-up&quot;&gt;Setting it up:&lt;/h2&gt;
+&lt;p&gt;I had referred to this &lt;a href=&quot;https://wiki.videolan.org/Compile_VLC/&quot;&gt;link&lt;/a&gt; I will be mostly mentioning about the commands mentioned there. So let us begin.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;1. To get the GNU build system:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-js&quot; data-lang=&quot;js&quot;&gt;&lt;span class=&quot;nx&quot;&gt;sudo&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;apt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;get&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;install&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;git&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;build&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;essential&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;pkg&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;config&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;libtool&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;automake&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;autopoint&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;gettext&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;strong&gt;2. Get the source code:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Clone it&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-js&quot; data-lang=&quot;js&quot;&gt;&lt;span class=&quot;nx&quot;&gt;git&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;clone&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;https&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;//github.com/videolan/vlc.git&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Get into the directory&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-js&quot; data-lang=&quot;js&quot;&gt;&lt;span class=&quot;nx&quot;&gt;cd&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;vlc&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://stackoverflow.com/questions/1254542/what-is-bootstrapping&quot;&gt;Bootstrap&lt;/a&gt; the source tree&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-js&quot; data-lang=&quot;js&quot;&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;bootstrap&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;strong&gt;3. Get all the needed libraries&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;First update your package lists using:&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-js&quot; data-lang=&quot;js&quot;&gt;&lt;span class=&quot;nx&quot;&gt;sudo&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;apt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;get&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;update&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Then get the required libraries:&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-js&quot; data-lang=&quot;js&quot;&gt;&lt;span class=&quot;nx&quot;&gt;sudo&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;apt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;get&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;build&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;dep&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;vlc&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;strong&gt;4. Check whether your system is able to compile VLC&lt;/strong&gt;&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-js&quot; data-lang=&quot;js&quot;&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;configure&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;This step might give you the following error:&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt; configure: error: No package 'xcb-xkb' found. Pass --disable-xcb to skip X11 support.&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Don’t&lt;/strong&gt; disable xcb. Instead install it. Find the required package for your system and then install it using a package manager. I used aptitude.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Install aptitude using:&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-js&quot; data-lang=&quot;js&quot;&gt;&lt;span class=&quot;nx&quot;&gt;sudo&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;apt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;get&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;install&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;aptitude&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Now, search package using:&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-js&quot; data-lang=&quot;js&quot;&gt;&lt;span class=&quot;nx&quot;&gt;aptitude&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;search&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;xcb&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;After you find it, install it by running (below is the package I needed, you need to find for your distribution) :&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-js&quot; data-lang=&quot;js&quot;&gt;&lt;span class=&quot;nx&quot;&gt;sudo&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;aptitude&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;install&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;libxcb&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;xkb&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;dev&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Run the command again:&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-js&quot; data-lang=&quot;js&quot;&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;configure&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;strong&gt;5. Now compile  :&lt;/strong&gt;&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-js&quot; data-lang=&quot;js&quot;&gt;&lt;span class=&quot;nx&quot;&gt;make&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;strong&gt;6. Run it :&lt;/strong&gt;&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-js&quot; data-lang=&quot;js&quot;&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;vlc&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;strong&gt;7. Now install XCB libraries by running :&lt;/strong&gt;&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-js&quot; data-lang=&quot;js&quot;&gt;&lt;span class=&quot;nx&quot;&gt;sudo&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;apt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;get&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;install&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;libxcb&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;shm0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;dev&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;libxcb&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;xv0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;dev&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;libxcb&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;keysyms1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;dev&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;libxcb&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;randr0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;dev&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;libxcb&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;composite0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;dev&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h2 id=&quot;thats-it-you-are-good-to-go-&quot;&gt;That’s it. You are good to go :)&lt;/h2&gt;</content><author><name></name></author><summary type="html">Before setting up the development environment, let’s get to know why you should prefer VLC over other media players, why it’s the best, its cool features and a lot more!</summary></entry></feed>
