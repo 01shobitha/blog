@@ -7,7 +7,7 @@ permalink: /:title
 
 You may find the link to the question [here][link-to-question].
 
-Problem statement: Given two array of strings- a and b, for corresponding strings in the two arrays, check if one is the substring of the other. If yes, Print "YES", else print "NO". 
+Problem statement: Given two array of strings- a and b, for each pair of corresponding strings in the two arrays, check if a there is a string that is substring of both strings. If yes, Print "YES", else print "NO". 
 Assuming the size of array is 'n', there should be n lines of output.
 
 Example: 
@@ -32,7 +32,7 @@ You can view other example from the link provided.
 Here is my approach:
 
     Iterate through both arrays.
-        For each string in array a, store the charectors in a set S.
+        For each string in array a, store the charecters in a set S.
         Set flag to false
         For each string in array b
             check if char is present in the set S.
@@ -79,18 +79,5 @@ void CommonString(vector<string> a, vector<string> b)
 }
 
 ```
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 [link-to-question]: https://www.hackerrank.com/challenges/two-strings/problem

@@ -47,7 +47,7 @@
   <div class="post-content e-content" itemprop="articleBody">
     <p>You may find the link to the question <a href="https://www.hackerrank.com/challenges/two-strings/problem">here</a>.</p>
 
-<p>Problem statement: Given two array of strings- a and b, for corresponding strings in the two arrays, check if one is the substring of the other. If yes, Print “YES”, else print “NO”. 
+<p>Problem statement: Given two array of strings- a and b, for each pair of corresponding strings in the two arrays, check if a there is a string that is substring of both strings. If yes, Print “YES”, else print “NO”. 
 Assuming the size of array is ‘n’, there should be n lines of output.</p>
 
 <p>Example:</p>
@@ -73,7 +73,7 @@ YES
 <p>Here is my approach:</p>
 
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Iterate through both arrays.
-    For each string in array a, store the charectors in a set S.
+    For each string in array a, store the charecters in a set S.
     Set flag to false
     For each string in array b
         check if char is present in the set S.

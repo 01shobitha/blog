@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.7">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-09-14T23:44:59+05:30</updated><id>http://localhost:4000/feed.xml</id><title type="html">A Developer’s blog</title><subtitle>My technical blog.</subtitle><entry><title type="html">Solving Two Strings</title><link href="http://localhost:4000/Solving-Two-Strings" rel="alternate" type="text/html" title="Solving Two Strings" /><published>2020-09-14T00:00:00+05:30</published><updated>2020-09-14T00:00:00+05:30</updated><id>http://localhost:4000/Solving-Two-Strings</id><content type="html" xml:base="http://localhost:4000/Solving-Two-Strings">&lt;p&gt;You may find the link to the question &lt;a href=&quot;https://www.hackerrank.com/challenges/two-strings/problem&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.7">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-09-15T00:33:25+05:30</updated><id>http://localhost:4000/feed.xml</id><title type="html">A Developer’s blog</title><subtitle>My technical blog.</subtitle><entry><title type="html">Solving Two Strings</title><link href="http://localhost:4000/Solving-Two-Strings" rel="alternate" type="text/html" title="Solving Two Strings" /><published>2020-09-14T00:00:00+05:30</published><updated>2020-09-14T00:00:00+05:30</updated><id>http://localhost:4000/Solving-Two-Strings</id><content type="html" xml:base="http://localhost:4000/Solving-Two-Strings">&lt;p&gt;You may find the link to the question &lt;a href=&quot;https://www.hackerrank.com/challenges/two-strings/problem&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;Problem statement: Given two array of strings- a and b, for corresponding strings in the two arrays, check if one is the substring of the other. If yes, Print “YES”, else print “NO”. 
+&lt;p&gt;Problem statement: Given two array of strings- a and b, for each pair of corresponding strings in the two arrays, check if a there is a string that is substring of both strings. If yes, Print “YES”, else print “NO”. 
 Assuming the size of array is ‘n’, there should be n lines of output.&lt;/p&gt;
 
 &lt;p&gt;Example:&lt;/p&gt;
@@ -26,7 +26,7 @@ YES
 &lt;p&gt;Here is my approach:&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Iterate through both arrays.
-    For each string in array a, store the charectors in a set S.
+    For each string in array a, store the charecters in a set S.
     Set flag to false
     For each string in array b
         check if char is present in the set S.
